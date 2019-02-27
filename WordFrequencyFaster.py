@@ -7,9 +7,11 @@ import time
 
 start_time = time.time()
 
+#-------------------------------------------------------------
+
 text = open(r"C:\Users\Witek\Desktop\pan-tadeusz.txt", encoding="utf8").read()
 words = text.replace("\n", " ")
-words = re.sub('[^A-Za-z0-9ąćęłńóśźż]+', ' ', words)
+words = re.sub('[^A-Za-z0-9ĄĆĘŁŃÓŚŹŻąćęłńóśźż]+', ' ', words)
 words = words.split(' ')
 
 #-------------------------------------------------------------
@@ -57,6 +59,8 @@ while(words):
             del words[0]
 
 print(count_list)
+
+#-------------------------------------------------------------
 
 elapsed_time = time.time() - start_time
 
